@@ -1,0 +1,30 @@
+#!/bin/bash
+
+name=$1
+#ecosystem="mnt/e/nodeprojects/expressexample/ecosystem.config.js"
+#$or="/mnt/e/nodeprojects/expressexample/"
+if [ -z "$name" ] || [ "$name" == "start" ];then
+    echo "iniciando el servidor"
+    echo "$ecosystem"
+    cd /mnt/e/nodeprojects/expressexample/
+    sudo pm2 start "ecosystem.config.js"
+    service mysql restart
+    service apache2 restart
+elif [ "$name" = "stop" ];then
+    echo "apagando el servidor"
+
+    sudo pm2 delete www
+    service apache2 stop
+    service mysql stop
+else
+    echo "no ejecutado"
+fi
+
+
+# sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
+# create symbolLink
+#sudo ln -s /mnt/e/nodeprojects/expressexample/bin/miscript /usr/local/bin/miscript
+
+# delete symbolLink
+#sudo rm /usr/local/bin/miscript

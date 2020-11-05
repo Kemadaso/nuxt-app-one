@@ -1,0 +1,8 @@
+NODE_ENV=development #can be development|production
+PORT=5000
+DBHOST=localhost
+DBNAME=prueba
+DBUSER=dev001
+DBPASS=unnamed001
+PRIVATEKEY=2312312
+PUBLICKEY=411244545
