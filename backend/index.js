@@ -1,4 +1,6 @@
-require('dotenv').config()
+var path = require('path')
+
+require('dotenv').config({ path: path.join(__dirname, '../.env') })
 
 var cluster = require('cluster')
 var app = require('./app')
@@ -30,10 +32,10 @@ if(cluster.isMaster) {
     next()
   })*/
 
-  app.listen(process.env.PORT || 8000, () => {
+  app.listen(process.env.PORTAPI || 8000, () => {
     //console.log(process.env.PORT)
     //console.log(process.env)
-    console.log(`Express server started on port ${process.env.PORT}.`)
+    console.log(`Express server started on port ${process.env.PORTAPI}.`)
 
   })
 

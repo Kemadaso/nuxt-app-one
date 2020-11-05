@@ -5,9 +5,7 @@
   "scripts": {
     "start": "npm run prod",
     "prod": "nodemon ./index.js",
-    "dev": "nodemon ./index.js & npm run frontend",
-    "frontend": "npm run devserver --prefix ./public/",
-    "pm2": "pm2 start && npm run service_start"
+    "dev": "nodemon ./index.js"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",

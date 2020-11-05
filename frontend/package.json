@@ -6,12 +6,14 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "prod": "npm run build & npm run start",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "ant-design-vue": "^1.6.5",
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
     "nuxt": "^2.14.6"
   },
   "devDependencies": {}

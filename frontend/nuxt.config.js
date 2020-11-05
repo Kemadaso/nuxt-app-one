@@ -1,4 +1,14 @@
+var path = require('path')
+
+require('dotenv').config({ path: path.join(__dirname, '../.env') })
+
 export default {
+
+  server: {
+    port: process.env.PORTSITE, // default: 3000
+    host: 'localhost' // default: localhost
+  },
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'nuxt-app-one',
